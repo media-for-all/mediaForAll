@@ -1,4 +1,4 @@
-export class Jobs {
+export class Job {
   id: number;
   productionName: string;
   productionDate: Date;

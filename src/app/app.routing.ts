@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'media-for-all/job-listings',
     component: JobsTableComponent
   },
-  { path: 'media-for-all/sign-up:stage',
+  { path: 'media-for-all/sign-up/:stage',
     component: SignUpManagerComponent
   },
   { path: 'media-for-all/admin',

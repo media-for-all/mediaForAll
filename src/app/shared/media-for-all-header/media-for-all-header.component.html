@@ -2,39 +2,48 @@
 <nz-header>
   <div class="logo"></div>
   <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" style="line-height: 60px;">
-    <li nz-menu-item>Fiirst Item</li>
-    <li nz-menu-item>Second Item</li>
+    <!--<li nz-menu-item>First Item</li>-->
+    <!--<li nz-menu-item>Second Item</li>-->
     <li nz-menu-item><button nz-button nzType="primary" (click)="openDrawer()">Log In</button>
     </li>
   </ul>
 </nz-header>
 
-<div id="logInDrawer">
-<nz-drawer [nzBodyStyle]="{ height: 'calc(10% - 55px)' }"[nzClosable]="false" [nzVisible]="visible" [nzPlacement]="'bottom'" nzTitle="Create" (nzOnClose)="closeDrawer()">  <form nz-form>
-    <div nz-row nzGutter="8">
-      <div nz-col nzSpan="10">
-        <nz-form-item>
-          <nz-form-label>Name</nz-form-label>
-          <nz-form-control>
-            <input nz-input placeholder="please enter user name">
-          </nz-form-control>
-        </nz-form-item>
-      </div>
-      <div nz-col nzSpan="10">
-        <nz-form-item>
-          <nz-form-label>Password</nz-form-label>
-          <nz-form-control>
-            <input nz-input placeholder="please enter your password">
-          </nz-form-control>
-        </nz-form-item>
-      </div>
-    </div>
+<div id="logInDrawer col-12 col-offset-6">
+<nz-drawer [nzClosable]="false" [nzVisible]="visible" [nzPlacement]="'bottom'" nzTitle="Log In" (nzOnClose)="closeDrawer()">
+  <form nz-form [formGroup]="validateLogin" class="login-form" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group nzPrefixIcon="anticon anticon-user">
+          <input type="text" nz-input formControlName="userName" placeholder="Username">
+        </nz-input-group>
+        <nz-form-explain *ngIf="validateLogin.get('userName').dirty && validateLogin.get('userName').errors">Please input your username!</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group nzPrefixIcon="anticon anticon-lock">
+          <input type="password" nz-input formControlName="password" placeholder="Password">
+        </nz-input-group>
+        <nz-form-explain *ngIf="validateLogin.get('password').dirty && validateLogin.get('password').errors">Please input your Password!</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <div nz-col nzSpan="24">
+          <label nz-checkbox formControlName="remember">
+            <span>Remember me</span>
+          </label>
+        </div>
+        <div nz-col nzSpan="24">
+          <a class="login-form-forgot" class="login-form-forgot" (click)="forgotPassword()">Forgot password</a>
+          or  <a (click)="goToRegistration()">Need to register?</a>
+        </div>
+        <div nz-col nzSpan="24">
+          <button nz-button class="login-form-button" (click)="closeDrawer()" [nzType]="'primary'">Log in</button>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
   </form>
-  <div class="footer">
-    <button type="button" (click)="closeDrawer()" class="ant-btn" style="margin-right: 8px;"><span>Cancel</span></button>
-    <button type="button" (click)="closeDrawer()" class="ant-btn ant-btn-primary"><span>Sign In</span></button>
-    <button type="button" (click)="GoToRegistration()" class="ant-btn ant-btn-primary"><span>Need To Sign Up?</span></button>
-  </div>
-
 </nz-drawer>
 </div>
