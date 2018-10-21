@@ -1,0 +1,40 @@
+
+<nz-header>
+  <div class="logo"></div>
+  <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" style="line-height: 64px;">
+    <li nz-menu-item>nav 1</li>
+    <li nz-menu-item>nav 2</li>
+    <li nz-menu-item><button nz-button nzType="primary" (click)="openDrawer()">Log In</button>
+    </li>
+  </ul>
+</nz-header>
+
+<div id="logInDrawer">
+<nz-drawer [nzBodyStyle]="{ height: 'calc(10% - 55px)' }"[nzClosable]="false" [nzVisible]="visible" [nzPlacement]="'bottom'" nzTitle="Create" (nzOnClose)="closeDrawer()">  <form nz-form>
+    <div nz-row nzGutter="8">
+      <div nz-col nzSpan="2">
+        <nz-form-item>
+          <nz-form-label>Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input placeholder="please enter user name">
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label>Password</nz-form-label>
+          <nz-form-control>
+            <input nz-input placeholder="please enter your password">
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+  </form>
+  <div class="footer">
+    <button type="button" (click)="closeDrawer()" class="ant-btn" style="margin-right: 8px;"><span>Cancel</span></button>
+    <button type="button" (click)="closeDrawer()" class="ant-btn ant-btn-primary"><span>Sign In</span></button>
+    <button type="button" (click)="GoToRegistration()" class="ant-btn ant-btn-primary"><span>Need To Sign Up?</span></button>
+  </div>
+
+</nz-drawer>
+</div>
