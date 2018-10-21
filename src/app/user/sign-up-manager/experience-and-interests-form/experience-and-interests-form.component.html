@@ -1,0 +1,32 @@
+
+
+
+  <nz-table #filterTable [nzData]="displayData">
+    <thead>
+    <tr>
+      <th>Category</th>
+      <th *ngIf="stage === 'experience'">Experience</th>
+      <th *ngIf="stage === 'interests'">Interests</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of filterTable.data">
+      <td>{{data.name}}</td>
+      <td>
+
+        <!--This is not working yet- one chooses all -->
+        <nz-radio-group [(ngModel)]="radioValue">
+          <label nz-radio nzValue="zero">0</label>
+          <label nz-radio nzValue="one">1</label>
+          <label nz-radio nzValue="two">2</label>
+          <label nz-radio nzValue="three">3</label>
+          <label nz-radio nzValue="four">4</label>
+          <label nz-radio nzValue="five">5</label>
+        </nz-radio-group>
+      </td>
+    </tr>
+    </tbody>
+  </nz-table>
+
+<button *ngIf="stage === 'experience'" nz-button class="primary" [routerLink]="['../', 'interests']">This Goes to Interests</button>
+<button   *ngIf="stage === 'interests'" nz-button class="primary" [routerLink]="['']">This Goes to job listings</button>

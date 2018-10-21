@@ -1,0 +1,25 @@
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid rgb(232, 232, 232);
+  padding: 10px 16px;
+  text-align: right;
+  left: 0px;
+  background: #fff;
+}
+
+
+::ng-deep .ant-drawer-content-wrapper {
+  margin-left: calc(100vw - 300px);
+  height: 335px !important;
+}
+
+/*uncomment this if mask overlay is NOT desired here*/
+/*::ng-deep .ant-drawer-mask {*/
+  /*width: 0px !important;*/
+/*}*/
+
+::ng-deep .ant-drawer-content {
+  width: 300px !important;
+}
