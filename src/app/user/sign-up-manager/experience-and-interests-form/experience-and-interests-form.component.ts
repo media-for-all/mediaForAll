@@ -17,8 +17,7 @@ export class ExperienceAndInterestsFormComponent implements OnInit {
 
   sortMap = {
     name   : null,
-    age    : null,
-    address: null
+    level    : null
   };
   sortName = null;
   sortValue = null;
@@ -68,12 +67,8 @@ export class ExperienceAndInterestsFormComponent implements OnInit {
       { text: 'Joe', value: 'Joe' },
       { text: 'Jim', value: 'Jim' }
     ];
-    this.filterAddressList = [
-      { text: 'London', value: 'London' },
-      { text: 'Sidney', value: 'Sidney' }
-    ];
+
     this.searchNameList = [];
-    this.searchAddressList = [];
     this.search(this.searchNameList);
   }
 
@@ -82,8 +77,7 @@ export class ExperienceAndInterestsFormComponent implements OnInit {
     this.sortValue = null;
     this.sortMap = {
       name   : null,
-      age    : null,
-      address: null
+      level    : null,
     };
     this.resetFilters();
     this.search(this.searchNameList);

@@ -22,8 +22,9 @@ export class SignUpManagerComponent implements OnInit, OnDestroy {
       this.stage = params.get('stage');
       if (this.stage === null) {
         this.stage = 'setup';
-      });
-    }
+      }
+    })
+  }
 
   ngOnDestroy() {
     this.routeSubscription.unsubscribe();
