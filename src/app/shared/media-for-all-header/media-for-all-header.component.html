@@ -1,0 +1,49 @@
+
+<nz-header>
+  <div class="logo"></div>
+  <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" style="line-height: 60px;">
+    <!--<li nz-menu-item>First Item</li>-->
+    <!--<li nz-menu-item>Second Item</li>-->
+    <li nz-menu-item><button nz-button nzType="primary" (click)="openDrawer()">Log In</button>
+    </li>
+  </ul>
+</nz-header>
+
+<div id="logInDrawer col-12 col-offset-6">
+<nz-drawer [nzClosable]="false" [nzVisible]="visible" [nzPlacement]="'bottom'" nzTitle="Log In" (nzOnClose)="closeDrawer()">
+  <form nz-form [formGroup]="validateLogin" class="login-form" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group nzPrefixIcon="anticon anticon-user">
+          <input type="text" nz-input formControlName="userName" placeholder="Username">
+        </nz-input-group>
+        <nz-form-explain *ngIf="validateLogin.get('userName').dirty && validateLogin.get('userName').errors">Please input your username!</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group nzPrefixIcon="anticon anticon-lock">
+          <input type="password" nz-input formControlName="password" placeholder="Password">
+        </nz-input-group>
+        <nz-form-explain *ngIf="validateLogin.get('password').dirty && validateLogin.get('password').errors">Please input your Password!</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <div nz-col nzSpan="24">
+          <label nz-checkbox formControlName="remember">
+            <span>Remember me</span>
+          </label>
+        </div>
+        <div nz-col nzSpan="24">
+          <a class="login-form-forgot" class="login-form-forgot" (click)="forgotPassword()">Forgot password</a>
+          or  <a (click)="goToRegistration()">Need to register?</a>
+        </div>
+        <div nz-col nzSpan="24">
+          <button nz-button class="login-form-button" (click)="closeDrawer()" [nzType]="'primary'">Log in</button>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</nz-drawer>
+</div>
