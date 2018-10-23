@@ -68,12 +68,7 @@ export class ExperienceAndInterestsFormComponent implements OnInit {
       { text: 'Joe', value: 'Joe' },
       { text: 'Jim', value: 'Jim' }
     ];
-    this.filterAddressList = [
-      { text: 'London', value: 'London' },
-      { text: 'Sidney', value: 'Sidney' }
-    ];
     this.searchNameList = [];
-    this.searchAddressList = [];
     this.search(this.searchNameList);
   }
 

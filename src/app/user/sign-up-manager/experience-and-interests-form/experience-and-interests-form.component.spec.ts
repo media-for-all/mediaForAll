@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExperienceAndInterestsFormComponent } from './experience-and-interests-form.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterTestingModule} from '@angular/router/testing';
+import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 
 describe('ExperienceAndInterestsFormComponent', () => {
   let component: ExperienceAndInterestsFormComponent;
@@ -8,7 +11,13 @@ describe('ExperienceAndInterestsFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExperienceAndInterestsFormComponent ]
+      declarations: [ ExperienceAndInterestsFormComponent ],
+      imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        RouterTestingModule
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));
