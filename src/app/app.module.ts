@@ -18,6 +18,7 @@ import {StepsHeaderComponent} from './user/sign-up-manager/steps-header/steps-he
 import {JobFormComponent} from './admin/job-form/job-form.component';
 import { UserResponseComponent } from './admin/user-response/user-response.component';
 import {MediaForAllHeaderModule} from './shared/media-for-all-header/media-for-all-header.module';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 registerLocaleData(en);
 
@@ -30,7 +31,8 @@ registerLocaleData(en);
     ExperienceAndInterestsFormComponent,
     StepsHeaderComponent,
     JobFormComponent,
-    UserResponseComponent
+    UserResponseComponent,
+    LandingPageComponent
   ],
   imports: [
     FormsModule,

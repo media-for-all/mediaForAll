@@ -27,3 +27,20 @@
     </div>
   </ng-container>
 </nz-calendar>
+
+
+<nz-row>
+  <nz-col nzSpan="5">
+    <nz-slider [nzMin]="1" [nzMax]="5" [(ngModel)]="value1"></nz-slider>
+  </nz-col>
+
+</nz-row>
+
+
+<button nz-button nzType="primary" (click)="showModalMiddle()">Vertically centered modal dialog</button>
+<nz-modal nzWrapClassName="vertical-center-modal" [(nzVisible)]="isVisibleMiddle" nzTitle="Vertically centered modal dialog" (nzOnCancel)="handleCancelMiddle()" (nzOnOk)="handleOkMiddle()">
+  <p>some contents...</p>
+  <p>some contents...</p>
+  <p>some contents...</p>
+</nz-modal>
+

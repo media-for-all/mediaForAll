@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jobs-table.component.css']
 })
 export class JobsTableComponent implements OnInit {
+  value1 = 1;
+  value2 = 0;
+  isVisibleTop = false;
+  isVisibleMiddle = false;
+
   listDataMap = {
     eight : [
       { type: 'warning', content: 'This is warning event.' },
@@ -37,4 +42,30 @@ export class JobsTableComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  showModalTop(): void {
+    this.isVisibleTop = true;
+  }
+
+  showModalMiddle(): void {
+    this.isVisibleMiddle = true;
+  }
+
+  handleOkTop(): void {
+    console.log('点击了确定');
+    this.isVisibleTop = false;
+  }
+
+  handleCancelTop(): void {
+    this.isVisibleTop = false;
+  }
+
+  handleOkMiddle(): void {
+    console.log('click ok');
+    this.isVisibleMiddle = false;
+  }
+
+  handleCancelMiddle(): void {
+    this.isVisibleMiddle = false;
+  }
 }
