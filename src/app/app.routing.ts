@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {JobsTableComponent} from './user/jobs-table/jobs-table.component';
 import {SignUpManagerComponent} from './user/sign-up-manager/sign-up-manager.component';
 import {JobFormComponent} from './admin/job-form/job-form.component';
+import {UserResponseComponent} from './admin/user-response/user-response.component';
 
 const routes: Routes = [
   { path: '',
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   { path: 'media-for-all/admin',
     component: JobFormComponent
+  },
+  { path: 'media-for-all/response',
+    component: UserResponseComponent
   }
 ];
 

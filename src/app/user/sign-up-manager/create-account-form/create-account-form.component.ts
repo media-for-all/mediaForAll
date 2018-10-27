@@ -8,6 +8,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class CreateAccountFormComponent implements OnInit {
   validateForm: FormGroup;
+  agree = false;
 
   constructor(private fb: FormBuilder) {
   }
@@ -18,8 +19,7 @@ export class CreateAccountFormComponent implements OnInit {
       password         : [ null, [ Validators.required ] ],
       checkPassword    : [ null, [ Validators.required, this.confirmationValidator ] ],
       phoneNumberPrefix: [ '1' ],
-      phoneNumber      : [ null, [ Validators.required ] ],
-      agree            : [ false ]
+      phoneNumber      : [ null, [ Validators.required ] ]
     });
   }
 

@@ -16,7 +16,8 @@ import {CreateAccountFormComponent} from './user/sign-up-manager/create-account-
 import {ExperienceAndInterestsFormComponent} from './user/sign-up-manager/experience-and-interests-form/experience-and-interests-form.component';
 import {StepsHeaderComponent} from './user/sign-up-manager/steps-header/steps-header.component';
 import {JobFormComponent} from './admin/job-form/job-form.component';
-import { MediaForAllHeaderComponent } from './shared/media-for-all-header/media-for-all-header.component';
+import { UserResponseComponent } from './admin/user-response/user-response.component';
+import {MediaForAllHeaderModule} from './shared/media-for-all-header/media-for-all-header.module';
 
 registerLocaleData(en);
 
@@ -29,7 +30,7 @@ registerLocaleData(en);
     ExperienceAndInterestsFormComponent,
     StepsHeaderComponent,
     JobFormComponent,
-    MediaForAllHeaderComponent
+    UserResponseComponent
   ],
   imports: [
     FormsModule,
@@ -38,7 +39,8 @@ registerLocaleData(en);
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    MediaForAllHeaderModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

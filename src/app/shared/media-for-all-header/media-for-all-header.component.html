@@ -1,7 +1,7 @@
 
 <nz-header>
   <div class="logo"></div>
-  <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" style="line-height: 60px;">
+  <ul nz-menu nzTheme="'light'" nzMode="'horizontal'" style="line-height: 60px;">
     <!--<li nz-menu-item>First Item</li>-->
     <!--<li nz-menu-item>Second Item</li>-->
     <li nz-menu-item><button nz-button nzType="primary" (click)="openDrawer()">Log In</button>
@@ -30,11 +30,6 @@
     </nz-form-item>
     <nz-form-item>
       <nz-form-control>
-        <div nz-col nzSpan="24">
-          <label nz-checkbox formControlName="remember">
-            <span>Remember me</span>
-          </label>
-        </div>
         <div nz-col nzSpan="24">
           <a class="login-form-forgot" class="login-form-forgot" (click)="forgotPassword()">Forgot password</a>
           or  <a (click)="goToRegistration()">Need to register?</a>
