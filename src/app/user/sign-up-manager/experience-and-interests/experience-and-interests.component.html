@@ -1,0 +1,6 @@
+<p>
+  experience-and-interests works!
+</p>
+
+<button *ngIf="stage === 'experience'" nz-button class="primary" [routerLink]="['../', 'interests']">This Goes to Interests</button>
+<button   *ngIf="stage === 'interests'" nz-button class="primary" [routerLink]="['']">This Goes to job listings</button>

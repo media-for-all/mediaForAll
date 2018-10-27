@@ -1,79 +1,29 @@
 <button nz-button class="primary" [routerLink]="['../sign-up', 'setup']">This Goes To Sign Up</button>
 
-<div class="display-flex">
-<div nz-col nzSpan="12" nzOffset="3">
-  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <div class="width">
-			category
-		  </div>
+<nz-calendar>
+  <ul *nzDateCell="let date" class="events">
+    <ng-container [ngSwitch]="date.getDate()">
+      <ng-container *ngSwitchCase="8">
+        <li *ngFor="let item of listDataMap.eight">
+          <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
+        </li>
+      </ng-container>
+      <ng-container *ngSwitchCase="10">
+        <li *ngFor="let item of listDataMap.ten">
+          <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
+        </li>
+      </ng-container>
+      <ng-container *ngSwitchCase="11">
+        <li *ngFor="let item of listDataMap.eleven">
+          <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
+        </li>
+      </ng-container>
+    </ng-container>
+  </ul>
+  <ng-container *nzMonthCell="let month">
+    <div *ngIf="getMonthData(month) as monthData" class="notes-month">
+      <section>{{ monthData }}</section>
+      <span>Backlog number</span>
     </div>
-    <div class="back" >
-      <nz-table #nzTable [nzData]="dataSet" [nzPageSize]="10">
-        <thead>
-        <tr>
-          <th nzShowExpand colspan="2">Notes</th>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Address</th>
-          <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <ng-template ngFor let-data [ngForOf]="nzTable.data">
-          <tr>
-            <td colspan="2" nzShowExpand [(nzExpand)]="data.expand"></td>
-            <td>{{data.name}}</td>
-            <td>{{data.age}}</td>
-            <td>{{data.address}}</td>
-            <td><a href="#">Apply</a></td>
-          </tr>
-          <tr [nzExpand]="data.expand">
-            <td></td>
-            <td colspan="6">{{data.description}}</td>
-          </tr>
-        </ng-template>
-        </tbody>
-      </nz-table>
-		</div>
-  </div>
-</div>
-
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      category
-    </div>
-    <div class="back" >
-      jobs
-    </div>
-  </div>
-</div>
-
-
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      category
-    </div>
-    <div class="back" >
-      jobs
-    </div>
-  </div>
-</div>
-
-
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      category
-    </div>
-    <div class="back" >
-      jobs
-    </div>
-  </div>
-</div>
-
-</div>
-</div>
+  </ng-container>
+</nz-calendar>

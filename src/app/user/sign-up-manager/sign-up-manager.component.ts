@@ -23,11 +23,7 @@ export class SignUpManagerComponent implements OnInit, OnDestroy {
       if (this.stage === null) {
         this.stage = 'setup';
       }
-<<<<<<< HEAD
     });
-=======
-    })
->>>>>>> 270406330e1c7e1ff1642408583242c73e65c10a
   }
 
   ngOnDestroy() {
