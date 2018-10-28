@@ -1,0 +1,33 @@
+/*::ng-deep body {*/
+  /*background-color: #11B5BC !important;*/
+/*}*/
+
+#top-section {
+  background-color: #11B5BC;
+  height: 52vh;
+}
+
+#middle-section {
+  background-color: #0f0d0f;
+  height: 39vh;
+}
+
+#bottom-section {
+  background-color: #11B5BC;
+  height: 9vh;
+}
+
+#overlay {
+  background-color: rgba(10, 21, 21, 0.3);
+  height: 9vh;
+}
+
+::ng-deep .ant-btn-block {
+  height: 9vh !important;
+}
+
+/*.icons-list > .anticon {*/
+  /*margin-right: 10px;*/
+  /*font-size: 26px;*/
+  /*background-color: white;*/
+/*}*/

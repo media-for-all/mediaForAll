@@ -12,7 +12,7 @@ describe('MediaForAllHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MediaForAllHeaderComponent, NgZorroAntdModule ],
+      declarations: [ MediaForAllHeaderComponent ],
       imports: [
         FormsModule,
         ReactiveFormsModule,
