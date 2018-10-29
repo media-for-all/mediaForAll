@@ -1,5 +1,8 @@
 <div id="top-section">
-  <p class="thin-font padding-top-200">Media For All</p>
+  <div id="img-holder">
+    <img src="assets/aquaM4A.jpg" alt="Media For All logo">
+  </div>
+  <p class="thin-font">Media For All</p>
 </div>
 <div id="middle-section">
   <p class="font-25 white padding-left-40 padding-top-60 padding-right-70 margin-bottom-0"><b>Find Production Crew Jobs</b></p>
@@ -8,11 +11,12 @@
 </div>
 <div id="bottom-section">
   <div nz-row>
-  <div id="overlay" nz-col nzSpan="19">
-<p class="white all-caps center-text padding-top-20">Get Started</p>
+  <div nz-col nzSpan="19">
+<!--<p class="white all-caps center-text padding-top-20">Get Started</p>-->
+    <button id="get-started" nz-button nzBlock [routerLink]="['./', 'sign-in-or-up']"><p class="white all-caps center-text padding-top-20">Get Started</p></button>
   </div>
     <div nz-col nzSpan="5">
-      <button id="full-height" nz-button nzBlock nzType="primary" [routerLink]="['./', 'sign-in-or-up']"><p class="font-25 padding-top-10">&#x276F;</p></button>
+      <button nz-button nzBlock nzType="primary" [routerLink]="['./', 'sign-in-or-up']"><p class="font-25 padding-top-10">&#x276F;</p></button>
     </div>
   </div>
 </div>

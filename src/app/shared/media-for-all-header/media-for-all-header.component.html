@@ -1,13 +1,14 @@
-
-<nz-header>
-  <div class="logo"></div>
-  <ul nz-menu nzTheme="'light'" nzMode="'horizontal'" style="line-height: 60px;">
-    <!--<li nz-menu-item>First Item</li>-->
-    <!--<li nz-menu-item>Second Item</li>-->
-    <li nz-menu-item><button nz-button nzType="primary" (click)="openDrawer()">Log In</button>
-    </li>
-  </ul>
-</nz-header>
+<div id="showing-header">
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="'light'" nzMode="'horizontal'" style="line-height: 60px;">
+      <!--<li nz-menu-item>First Item</li>-->
+      <!--<li nz-menu-item>Second Item</li>-->
+      <li nz-menu-item><button nz-button nzType="primary" (click)="openDrawer()">Log In</button>
+      </li>
+    </ul>
+  </nz-header>
+</div>
 
 <div id="logInDrawer col-12 col-offset-6">
 <nz-drawer [nzClosable]="false" [nzVisible]="visible" [nzPlacement]="'bottom'" nzTitle="Log In" (nzOnClose)="closeDrawer()">
