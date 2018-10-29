@@ -1,6 +1,69 @@
-<p>
-  experience-and-interests works!
-</p>
+<div id="top-section">
+  <div nz-row>
+    <div nz-col nzSpan="5">
+      <button *ngIf="stage === 'interests'" class="back" nz-button nzBlock [routerLink]="['../', 'setup']"><p class="font-25 padding-top-10">&#x276E;</p></button>
+      <button *ngIf="stage === 'experience'" class="back" nz-button nzBlock [routerLink]="['../', 'interests']"><p class="font-25 padding-top-10">&#x276E;</p></button>
 
-<button *ngIf="stage === 'experience'" nz-button class="primary" [routerLink]="['../', 'interests']">This Goes to Interests</button>
-<button   *ngIf="stage === 'interests'" nz-button class="primary" [routerLink]="['']">This Goes to job listings</button>
+    </div>
+    <div nz-col nzSpan="19">
+      <p  *ngIf="stage === 'interests'" class="white font-25 padding-top-10">Rate Your Interests</p>
+      <p  *ngIf="stage === 'experience'"class="white font-25 padding-top-10">Rate Your Experience</p>
+    </div>
+  </div>
+</div>
+<div id="middle-section">
+  <ng-container *ngFor="let category of categoriesOfJobs">
+    <nz-modal [nzStyle]="{ top: '20px' }" [(nzVisible)]="isVisibleTop" nzTitle="Interest from 1-5" (nzOnCancel)="handleCancelTop()" (nzOnOk)="handleOkTop()">
+      <ng-container *ngFor="let job of jobsInCategories">
+        <p style="color: #11B5BC; text-align: center">{{job.title}}<nz-tooltip nzTitle={{job.description}}></nz-tooltip></p>
+          <nz-slider [nzMin]="1" [nzMax]="5" name="slider" ngDefaultControl [(ngModel)]="job.scale"></nz-slider>
+            <div nz-col nzSpan="10">
+              <p class="slider-definition">No Experience</p>
+            </div>
+            <div nz-col nzSpan="14">
+              <p class="slider-definition text-right"> Pro Experience</p>
+           </div>
+      </ng-container>
+    </nz-modal>
+    <div style="background: #11B5BC;padding:30px;">
+      <div nz-row [nzGutter]="1">
+        <div nz-col [nzSpan]="22">
+          <nz-card class="cursor-pointer" (click)="showModalTop(category)" nzTitle="{{category.category}}">
+            <p>{{category.description}}</p>
+          </nz-card>
+        </div>
+        <!--<div nz-col [nzSpan]="8">-->
+          <!--<nz-card nzTitle="Card title">-->
+            <!--<p>Card content</p>-->
+          <!--</nz-card>-->
+        <!--</div>-->
+        <!--<div nz-col [nzSpan]="8">-->
+          <!--<nz-card nzTitle="Card title">-->
+            <!--<p>Card content</p>-->
+          <!--</nz-card>-->
+        <!--</div>-->
+      </div>
+    </div>
+  </ng-container>
+  <!--(click)="showModalMiddle()"-->
+  <!--<p class="font-25 white padding-left-40 padding-top-60 padding-right-70 margin-bottom-0"><b>Find Production Crew Jobs</b></p>-->
+  <!--<p class="white padding-left-40 margin-bottom-0">______</p>-->
+  <!--<p class="grey padding-left-40">Apply now.<br>No experience necessary.</p>-->
+</div>
+<div id="bottom-section">
+  <!--<div nz-row>-->
+    <!--<div nz-col nzSpan="19">-->
+      <!--&lt;!&ndash;<p class="white all-caps center-text padding-top-20">Get Started</p>&ndash;&gt;-->
+      <!--<button id="get-started" nz-button nzBlock [routerLink]="['./', 'sign-in-or-up']"><p class="white all-caps center-text padding-top-20">Get Started</p></button>-->
+    <!--</div>-->
+    <!--<div nz-col nzSpan="5">-->
+      <!--<button nz-button nzBlock nzType="primary" [routerLink]="['./', 'sign-in-or-up']"><p class="font-25 padding-top-10">&#x276F;</p></button>-->
+    <!--</div>-->
+  <!--</div>-->
+  <button *ngIf="stage === 'interests'" nz-button class="next-button-white" [routerLink]="['../', 'experience']">Next</button>
+  <button *ngIf="stage === 'experience'" nz-button class="next-button-white" [routerLink]="['']">Next</button>
+
+</div>
+
+
+

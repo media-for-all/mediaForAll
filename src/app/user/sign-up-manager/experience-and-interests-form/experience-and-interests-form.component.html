@@ -1,107 +1,36 @@
 
-<div class="display-flex">
-  <div nz-col nzSpan="12" nzOffset="3">
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flipper">
-        <div class="front">
-          <div class="width">
-            category
-          </div>
-        </div>
-        <div class="back" >
-          <nz-table #nzTable [nzData]="dataSet" [nzPageSize]="10">
-            <thead>
-            <tr>
-              <th nzShowExpand colspan="2">Notes</th>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Address</th>
-              <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <ng-template ngFor let-data [ngForOf]="nzTable.data">
-              <tr>
-                <td colspan="2" nzShowExpand [(nzExpand)]="data.expand"></td>
-                <td>{{data.name}}</td>
-                <td>{{data.age}}</td>
-                <td>{{data.address}}</td>
-                <td><a href="#">Apply</a></td>
-              </tr>
-              <tr [nzExpand]="data.expand">
-                <td></td>
-                <td colspan="6">{{data.description}}</td>
-              </tr>
-            </ng-template>
-            </tbody>
-          </nz-table>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flipper">
-        <div class="front">
-          category
-        </div>
-        <div class="back" >
-          <nz-table #filterTable [nzData]="displayData">
-            <thead>
-            <tr>
-              <th>Category</th>
-              <th *ngIf="stage === 'experience'">Experience</th>
-              <th *ngIf="stage === 'interests'">Interests</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let data of filterTable.data">
-              <td>{{data.name}}</td>
-              <td>
-
-                <!--This is not working yet- one chooses all -->
-                <nz-radio-group [(ngModel)]="radioValue">
-                  <label nz-radio nzValue="zero">0</label>
-                  <label nz-radio nzValue="one">1</label>
-                  <label nz-radio nzValue="two">2</label>
-                  <label nz-radio nzValue="three">3</label>
-                  <label nz-radio nzValue="four">4</label>
-                  <label nz-radio nzValue="five">5</label>
-                </nz-radio-group>
-              </td>
-            </tr>
-            </tbody>
-          </nz-table>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flipper">
-        <div class="front">
-          category
-        </div>
-        <div class="back" >
-          jobs
-        </div>
-      </div>
-    </div>
-
-
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flipper">
-        <div class="front">
-          category
-        </div>
-        <div class="back" >
-          jobs
-        </div>
-      </div>
-    </div>
-
+<nz-row>
+  <nz-col nzSpan="12">
+    <nz-slider [nzMin]="1" [nzMax]="5" name="slider" ngDefaultControl [(ngModel)]="value1"></nz-slider>
+  </nz-col>
+  <div nz-col nzSpan="4">
+    <nz-input-number [nzMin]="1" [nzMax]="5" [ngStyle]="{ 'marginLeft': '16px' }" name="number-input" ngDefaultControl [(ngModel)]="value1"></nz-input-number>
   </div>
-</div>
+</nz-row>
 
 
 <button *ngIf="stage === 'experience'" nz-button class="primary" [routerLink]="['../', 'interests']">This Goes to Interests</button>
 <button   *ngIf="stage === 'interests'" nz-button class="primary" [routerLink]="['']">This Goes to job listings</button>
+
+<div id="top-section">
+  <div id="img-holder">
+    <img src="assets/aquaM4A.jpg" alt="Media For All logo">
+  </div>
+  <p class="thin-font">Media For All</p>
+</div>
+<div id="middle-section">
+  <p class="font-25 white padding-left-40 padding-top-60 padding-right-70 margin-bottom-0"><b>Find Production Crew Jobs</b></p>
+  <p class="white padding-left-40 margin-bottom-0">______</p>
+  <p class="grey padding-left-40">Apply now.<br>No experience necessary.</p>
+</div>
+<div id="bottom-section">
+  <div nz-row>
+    <div nz-col nzSpan="19">
+      <!--<p class="white all-caps center-text padding-top-20">Get Started</p>-->
+      <button id="get-started" nz-button nzBlock [routerLink]="['./', 'sign-in-or-up']"><p class="white all-caps center-text padding-top-20">Get Started</p></button>
+    </div>
+    <div nz-col nzSpan="5">
+      <button nz-button nzBlock nzType="primary" [routerLink]="['./', 'sign-in-or-up']"><p class="font-25 padding-top-10">&#x276F;</p></button>
+    </div>
+  </div>
+</div>

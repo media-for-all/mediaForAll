@@ -1,22 +1,93 @@
-.events {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/*.events {*/
+  /*list-style: none;*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+/*}*/
+
+/*.events .ant-badge-status {*/
+  /*overflow: hidden;*/
+  /*white-space: nowrap;*/
+  /*width: 100%;*/
+  /*text-overflow: ellipsis;*/
+  /*font-size: 12px;*/
+/*}*/
+
+/*.notes-month {*/
+  /*text-align: center;*/
+  /*font-size: 28px;*/
+/*}*/
+
+/*.notes-month section {*/
+  /*font-size: 28px;*/
+/*}*/
+
+/*::ng-deep .vertical-center-modal {*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+/*}*/
+
+/*::ng-deep .vertical-center-modal .ant-modal {*/
+  /*top: 0;*/
+/*}*/
+
+
+#top-section {
+  background-color: #11B5BC;
+  height: 9vh;
 }
 
-.events .ant-badge-status {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  text-overflow: ellipsis;
-  font-size: 12px;
+#middle-section {
+  background-color: #ffffff;
+  display: block;
+  /*height: 82vh;*/
 }
 
-.notes-month {
-  text-align: center;
-  font-size: 28px;
+#bottom-section {
+  background-color: #afafb1;
+  height: 9vh;
+  display: block;
 }
 
-.notes-month section {
-  font-size: 28px;
+#back {
+  background-color: #11B5BC;
+  border: none;
+  border-radius: 0px;
+  color: white;
+  font-size: 18px;
+}
+
+#no-bullets {
+  list-style-type: none;
+  padding: 0px
+ }
+
+::ng-deep .ant-btn {
+  border: none;
+  border-radius: 0px;
+}
+
+::ng-deep .ant-btn-block {
+  height: 9vh !important;
+  margin-left: -10px !important;
+}
+
+::ng-deep .ant-table {
+  height: 62vh;
+}
+
+::ng-deep .ant-table-tbody > tr > td {
+  padding: 20px 0px !important;
+}
+
+::ng-deep .ant-table-thead {
+  display: none;
+}
+
+::ng-deep .ant-table-pagination.ant-pagination {
+  display: none;
+}
+
+::ng-deep .ant-modal-footer {
+  display: none;
 }

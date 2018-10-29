@@ -1,18 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserResponseComponent } from './user-response.component';
-import {NgZorroAntdModule} from 'ng-zorro-antd';
+import { LandingPageComponent } from './landing-page.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
 import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
+import {NgZorroAntdModule} from 'ng-zorro-antd';
 
-describe('UserResponseComponent', () => {
-  let component: UserResponseComponent;
-  let fixture: ComponentFixture<UserResponseComponent>;
+describe('LandingPageComponent', () => {
+  let component: LandingPageComponent;
+  let fixture: ComponentFixture<LandingPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserResponseComponent ],
+      declarations: [ LandingPageComponent ],
       imports: [
         FormsModule,
         ReactiveFormsModule,
@@ -24,7 +24,7 @@ describe('UserResponseComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserResponseComponent);
+    fixture = TestBed.createComponent(LandingPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

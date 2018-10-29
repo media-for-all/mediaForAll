@@ -1,29 +1,48 @@
-<button nz-button class="primary" [routerLink]="['../sign-up', 'setup']">This Goes To Sign Up</button>
-
-<nz-calendar>
-  <ul *nzDateCell="let date" class="events">
-    <ng-container [ngSwitch]="date.getDate()">
-      <ng-container *ngSwitchCase="8">
-        <li *ngFor="let item of listDataMap.eight">
-          <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
-        </li>
-      </ng-container>
-      <ng-container *ngSwitchCase="10">
-        <li *ngFor="let item of listDataMap.ten">
-          <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
-        </li>
-      </ng-container>
-      <ng-container *ngSwitchCase="11">
-        <li *ngFor="let item of listDataMap.eleven">
-          <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
-        </li>
-      </ng-container>
-    </ng-container>
-  </ul>
-  <ng-container *nzMonthCell="let month">
-    <div *ngIf="getMonthData(month) as monthData" class="notes-month">
-      <section>{{ monthData }}</section>
-      <span>Backlog number</span>
+<div id="top-section">
+  <div nz-row>
+    <div nz-col nzSpan="5">
+  <button id="back" nz-button nzBlock [routerLink]="['../', 'sign-in-or-up']"><p class="font-25 padding-top-10">&#x276E;</p></button>
     </div>
-  </ng-container>
-</nz-calendar>
+    <div nz-col nzSpan="19">
+  <h6 class="white font-25 padding-top-10">All Available Jobs</h6>
+      </div>
+    </div>
+</div>
+<div id="middle-section">
+  <nz-table #nzTable [nzData]="dataSet">
+    <thead>
+    <tr>
+      <th nzShowExpand></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-template ngFor let-data [ngForOf]="nzTable.data">
+      <tr>
+        <td nzShowExpand [(nzExpand)]="data.expand"></td>
+        <td>{{data.position}}</td>
+        <td>{{data.date}}</td>
+        <td class="no-padding">
+          <ul id="no-bullets">
+            <!--TODO: need popup or something here to say "you've applied"-->
+            <li><a (click)="appliedForJob(data)">Apply</a></li>
+            <li><a (click)="showModalMiddle()">Log In</a></li>
+            <li><a [routerLink]="['../sign-up', 'setup']">Sign Up</a></li>
+          </ul>
+      </tr>
+      <tr [nzExpand]="data.expand">
+        <td></td>
+        <td colspan="4">{{data.description}}</td>
+      </tr>
+    </ng-template>
+    </tbody>
+  </nz-table>
+
+</div>
+
+<nz-modal nzWrapClassName="vertical-center-modal" [(nzVisible)]="isVisibleMiddle" nzTitle="Log In" (nzOnCancel)="handleCancelMiddle()" (nzOnOk)="handleOkMiddle()">
+  <app-log-in-form [wideInput]="false"></app-log-in-form>
+</nz-modal>
+

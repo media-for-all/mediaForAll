@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ExperienceAndInterestsFormComponent implements OnInit {
   @Input() stage: string;
+  value1 = 1;
 
   dataSet = [
     {

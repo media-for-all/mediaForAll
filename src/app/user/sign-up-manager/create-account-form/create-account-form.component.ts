@@ -4,11 +4,11 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 @Component({
   selector: 'app-create-account-form',
   templateUrl: './create-account-form.component.html',
-  styleUrls: ['./create-account-form.component.css']
+  styleUrls: ['./create-account-form.component.css', '../../../../theme.less']
 })
 export class CreateAccountFormComponent implements OnInit {
   validateForm: FormGroup;
-  agree = false;
+  checked = false;
 
   constructor(private fb: FormBuilder) {
   }
@@ -18,7 +18,6 @@ export class CreateAccountFormComponent implements OnInit {
       email            : [ null, [ Validators.email ] ],
       password         : [ null, [ Validators.required ] ],
       checkPassword    : [ null, [ Validators.required, this.confirmationValidator ] ],
-      phoneNumberPrefix: [ '1' ],
       phoneNumber      : [ null, [ Validators.required ] ]
     });
   }

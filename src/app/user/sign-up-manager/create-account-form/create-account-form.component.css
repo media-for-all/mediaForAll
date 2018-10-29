@@ -1,0 +1,67 @@
+#top-section {
+  background-color: #11B5BC;
+  height: 13vh;
+}
+
+#middle-section {
+  background-color: #11B5BC;
+  height: 75vh;
+}
+
+#bottom-section {
+  background-color: #afafb1;
+  height: 11vh;
+}
+
+#img-holder {
+  display: flex;
+  padding-top: 10%;
+}
+
+img {
+  width: 22vw;
+  height: 22vw;
+}
+
+@media screen and (max-width: 768px) {
+  #middle-section {
+    padding: 10px 0px 0px 35px;
+  }
+}
+
+/*::ng-deep .ant-checkbox ant-checkbox-checked {*/
+  /*background-color: #AFAFB1;*/
+  /*color: #AFAFB1;*/
+
+/*}*/
+
+#back {
+  background-color: #11B5BC;
+  border: none;
+  border-radius: 0px;
+  color: white;
+  font-size: 18px;
+}
+
+::ng-deep .ant-btn:hover {
+  color: #11B5BC;
+  background: #11B5BC;
+  border-color: #11B5BC;
+}
+
+::ng-deep .ant-btn:focus {
+  color: #11B5BC;
+  background: #11B5BC;
+  border-color: #11B5BC;
+}
+
+::ng-deep .ant-btn.active {
+  color: #11B5BC;
+  background: #11B5BC;
+  border-color: #11B5BC;
+}
+
+::ng-deep .ant-btn {
+  border-color: #11B5BC;
+  background: #11B5BC;
+}

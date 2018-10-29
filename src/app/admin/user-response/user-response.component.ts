@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-response.component.css']
 })
 export class UserResponseComponent implements OnInit {
+  value1 = 1;
+  value2 = 0;
 
   constructor() { }
 
