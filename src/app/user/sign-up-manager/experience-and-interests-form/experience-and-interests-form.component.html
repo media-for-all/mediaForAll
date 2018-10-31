@@ -1,32 +1,36 @@
 
+<nz-row>
+  <nz-col nzSpan="12">
+    <nz-slider [nzMin]="1" [nzMax]="5" name="slider" ngDefaultControl [(ngModel)]="value1"></nz-slider>
+  </nz-col>
+  <div nz-col nzSpan="4">
+    <nz-input-number [nzMin]="1" [nzMax]="5" [ngStyle]="{ 'marginLeft': '16px' }" name="number-input" ngDefaultControl [(ngModel)]="value1"></nz-input-number>
+  </div>
+</nz-row>
 
-
-  <nz-table #filterTable [nzData]="displayData">
-    <thead>
-    <tr>
-      <th>Category</th>
-      <th *ngIf="stage === 'experience'">Experience</th>
-      <th *ngIf="stage === 'interests'">Interests</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let data of filterTable.data">
-      <td>{{data.name}}</td>
-      <td>
-
-        <!--This is not working yet- one chooses all -->
-        <nz-radio-group [(ngModel)]="radioValue">
-          <label nz-radio nzValue="zero">0</label>
-          <label nz-radio nzValue="one">1</label>
-          <label nz-radio nzValue="two">2</label>
-          <label nz-radio nzValue="three">3</label>
-          <label nz-radio nzValue="four">4</label>
-          <label nz-radio nzValue="five">5</label>
-        </nz-radio-group>
-      </td>
-    </tr>
-    </tbody>
-  </nz-table>
 
 <button *ngIf="stage === 'experience'" nz-button class="primary" [routerLink]="['../', 'interests']">This Goes to Interests</button>
 <button   *ngIf="stage === 'interests'" nz-button class="primary" [routerLink]="['']">This Goes to job listings</button>
+
+<div id="top-section">
+  <div id="img-holder">
+    <img src="assets/aquaM4A.jpg" alt="Media For All logo">
+  </div>
+  <p class="thin-font">Media For All</p>
+</div>
+<div id="middle-section">
+  <p class="font-25 white padding-left-40 padding-top-60 padding-right-70 margin-bottom-0"><b>Find Production Crew Jobs</b></p>
+  <p class="white padding-left-40 margin-bottom-0">______</p>
+  <p class="grey padding-left-40">Apply now.<br>No experience necessary.</p>
+</div>
+<div id="bottom-section">
+  <div nz-row>
+    <div nz-col nzSpan="19">
+      <!--<p class="white all-caps center-text padding-top-20">Get Started</p>-->
+      <button id="get-started" nz-button nzBlock [routerLink]="['./', 'sign-in-or-up']"><p class="white all-caps center-text padding-top-20">Get Started</p></button>
+    </div>
+    <div nz-col nzSpan="5">
+      <button nz-button nzBlock nzType="primary" [routerLink]="['./', 'sign-in-or-up']"><p class="font-25 padding-top-10">&#x276F;</p></button>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,58 @@
-<p>
-  job-form works!
-</p>
+<div nz-col [nzSpan]="20" [nzOffset]="2">
+
+  <form nz-form [formGroup]="addJobForm" class="login-form padding-top-20" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input class="high-input" type="text" nz-input formControlName="position" placeholder="position">
+        </nz-input-group>
+        <nz-form-explain class="padding-left-30" *ngIf="addJobForm.get('position').dirty && addJobForm.get('position').errors">Please enter a position</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input class="high-input" type="text" nz-input formControlName="productionName" placeholder="productionName">
+        </nz-input-group>
+        <nz-form-explain class="padding-left-30" *ngIf="addJobForm.get('productionName').dirty && addJobForm.get('productionName').errors">Please input the production name</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input class="high-input" type="text" nz-input formControlName="productionDate" placeholder="productionDate">
+        </nz-input-group>
+        <nz-form-explain class="padding-left-30" *ngIf="addJobForm.get('productionDate').dirty && addJobForm.get('productionDate').errors">Please the production date</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input class="high-input" type="text" nz-input formControlName="callTime" placeholder="callTime">
+        </nz-input-group>
+        <nz-form-explain class="padding-left-30" *ngIf="addJobForm.get('callTime').dirty && addJobForm.get('callTime').errors">Please the call time</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input class="high-input" type="text" nz-input formControlName="timeCommitment" placeholder="timeCommitment">
+        </nz-input-group>
+        <nz-form-explain class="padding-left-30" *ngIf="addJobForm.get('timeCommitment').dirty && addJobForm.get('timeCommitment').errors">Please the time commitment</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input class="high-input" type="text" nz-input formControlName="notes" placeholder="notes">
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button class="job-form-button" (click)="addJob()" [nzType]="'primary'">Add Job</button>
+        <!--<a class="padding-left-40 margin-bottom-20" (click)="forgotPassword()">Forgot password</a>-->
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>

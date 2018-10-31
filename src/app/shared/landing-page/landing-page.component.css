@@ -1,0 +1,56 @@
+/*::ng-deep body {*/
+  /*background-color: #11B5BC !important;*/
+/*}*/
+
+#img-holder {
+ display: flex;
+  justify-content: center;
+  padding-top: 20%;
+}
+
+img {
+  width: 42vw;
+  height: 42vw;
+}
+
+#top-section {
+  background-color: #11B5BC;
+  height: 53vh;
+}
+
+#middle-section {
+  background-color: #0f0d0f;
+  height: 38vh;
+}
+
+#bottom-section {
+  background-color: #11B5BC;
+}
+
+#get-started {
+  background-color: rgba(10, 21, 21, 0.3);
+  height: 9vh;
+  border: none;
+  border-radius: 0px;
+}
+
+#hidden-admin-button {
+  background-color: #11B5BC;
+  border: none;
+  border-radius: 0px;
+}
+
+::ng-deep .ant-btn {
+  border: none;
+  border-radius: 0px;
+}
+
+::ng-deep .ant-btn-block {
+  height: 9vh !important;
+}
+
+/*.icons-list > .anticon {*/
+  /*margin-right: 10px;*/
+  /*font-size: 26px;*/
+  /*background-color: white;*/
+/*}*/

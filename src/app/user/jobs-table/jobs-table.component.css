@@ -1,92 +1,93 @@
-/* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-/*  UPDATED! flip the pane when hovered */
-.flip-container:hover .back {
-  transform: rotateY(0deg);
-}
-.flip-container:hover .front {
-  transform: rotateY(180deg);
+/*.events {*/
+  /*list-style: none;*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+/*}*/
+
+/*.events .ant-badge-status {*/
+  /*overflow: hidden;*/
+  /*white-space: nowrap;*/
+  /*width: 100%;*/
+  /*text-overflow: ellipsis;*/
+  /*font-size: 12px;*/
+/*}*/
+
+/*.notes-month {*/
+  /*text-align: center;*/
+  /*font-size: 28px;*/
+/*}*/
+
+/*.notes-month section {*/
+  /*font-size: 28px;*/
+/*}*/
+
+/*::ng-deep .vertical-center-modal {*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+/*}*/
+
+/*::ng-deep .vertical-center-modal .ant-modal {*/
+  /*top: 0;*/
+/*}*/
+
+
+#top-section {
+  background-color: #11B5BC;
+  height: 9vh;
 }
 
-.flip-container, .front {
-  width: 320px !important;
-  height: 480px;
-}
-.flip-container, .front, .back {
-  width: 650px;
-  height: 480px;
+#middle-section {
+  background-color: #ffffff;
+  display: block;
+  /*height: 82vh;*/
 }
 
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-
-  position: relative;
+#bottom-section {
+  background-color: #afafb1;
+  height: 9vh;
+  display: block;
 }
 
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-  transition: 0.6s;
-  transform-style: preserve-3d;
-
-  position: absolute;
-  top: 0;
-  left: 0;
+#back {
+  background-color: #11B5BC;
+  border: none;
+  border-radius: 0px;
+  color: white;
+  font-size: 18px;
 }
 
-/*  UPDATED! front pane, placed above back */
-.front {
-  z-index: 2;
-  transform: rotateY(0deg);
-  background-color: lightcyan;
+#no-bullets {
+  list-style-type: none;
+  padding: 0px
+ }
+
+::ng-deep .ant-btn {
+  border: none;
+  border-radius: 0px;
 }
 
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(-180deg);
-  border: 1px solid lightgrey;
+::ng-deep .ant-btn-block {
+  height: 9vh !important;
+  margin-left: -10px !important;
 }
 
-#first-card {
-  width: 400px;
-  height: 300px;
+::ng-deep .ant-table {
+  height: 62vh;
 }
 
-#second-card {
-  width: 600px;
-  height: 300px;
+::ng-deep .ant-table-tbody > tr > td {
+  padding: 20px 0px !important;
 }
 
-#third-card {
-  width: 200px;
-  height: 300px;
+::ng-deep .ant-table-thead {
+  display: none;
 }
 
-#fourth-card {
-  width: 00px;
-  height: 300px;
+::ng-deep .ant-table-pagination.ant-pagination {
+  display: none;
 }
 
-/*
-	Some vertical flip updates
-*/
-.vertical.flip-container {
-  position: relative;
-}
-
-.vertical .back {
-  transform: rotateX(180deg);
-}
-
-.vertical.flip-container:hover .back {
-  transform: rotateX(0deg);
-}
-
-.vertical.flip-container:hover .front {
-  transform: rotateX(180deg);
+::ng-deep .ant-modal-footer {
+  display: none;
 }

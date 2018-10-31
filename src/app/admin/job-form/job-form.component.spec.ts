@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { JobFormComponent } from './job-form.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterTestingModule} from '@angular/router/testing';
+import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 
 describe('JobFormComponent', () => {
   let component: JobFormComponent;
@@ -8,7 +11,13 @@ describe('JobFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JobFormComponent ]
+      declarations: [ JobFormComponent ],
+      imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        RouterTestingModule
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));

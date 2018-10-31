@@ -10,7 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 export class SignUpManagerComponent implements OnInit, OnDestroy {
   stage: string;
 
-  // let Angular know I want to grab pieces of the route
+  // let Angular know to grab pieces of the route
   private routeSubscription: Subscription = new Subscription();
 
   constructor(
@@ -23,7 +23,7 @@ export class SignUpManagerComponent implements OnInit, OnDestroy {
       if (this.stage === null) {
         this.stage = 'setup';
       }
-    })
+    });
   }
 
   ngOnDestroy() {

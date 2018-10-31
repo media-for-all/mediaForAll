@@ -13,10 +13,16 @@ import {environment} from '../environments/environment';
 import {JobsTableComponent} from './user/jobs-table/jobs-table.component';
 import {SignUpManagerComponent} from './user/sign-up-manager/sign-up-manager.component';
 import {CreateAccountFormComponent} from './user/sign-up-manager/create-account-form/create-account-form.component';
-import {ExperienceAndInterestsFormComponent} from './user/sign-up-manager/experience-and-interests-form/experience-and-interests-form.component';
 import {StepsHeaderComponent} from './user/sign-up-manager/steps-header/steps-header.component';
 import {JobFormComponent} from './admin/job-form/job-form.component';
-import { MediaForAllHeaderComponent } from './shared/media-for-all-header/media-for-all-header.component';
+import { UserResponseComponent } from './admin/user-response/user-response.component';
+import {ClickToSignInOrUpComponent} from './shared/click-to-sign-in-or-up/click-to-sign-in-or-up.component';
+import {LandingPageComponent} from './shared/landing-page/landing-page.component';
+import {MediaForAllHeaderComponent} from './shared/media-for-all-header/media-for-all-header.component';
+import {LogInFormComponent} from './shared/log-in/log-in-form/log-in-form.component';
+import {ExperienceAndInterestsComponent} from './user/sign-up-manager/experience-and-interests/experience-and-interests.component';
+import {ExperienceAndInterestsFormComponent} from './user/sign-up-manager/experience-and-interests-form/experience-and-interests-form.component';
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 
 registerLocaleData(en);
 
@@ -26,10 +32,16 @@ registerLocaleData(en);
     JobsTableComponent,
     SignUpManagerComponent,
     CreateAccountFormComponent,
-    ExperienceAndInterestsFormComponent,
     StepsHeaderComponent,
+    ExperienceAndInterestsComponent,
+    ExperienceAndInterestsFormComponent,
     JobFormComponent,
-    MediaForAllHeaderComponent
+    UserResponseComponent,
+    LandingPageComponent,
+    ClickToSignInOrUpComponent,
+    MediaForAllHeaderComponent,
+    LogInFormComponent,
+    AdminPageComponent
   ],
   imports: [
     FormsModule,
@@ -38,7 +50,7 @@ registerLocaleData(en);
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

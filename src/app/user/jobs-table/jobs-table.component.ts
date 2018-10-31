@@ -3,35 +3,87 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-jobs-table',
   templateUrl: './jobs-table.component.html',
-  styleUrls: ['./jobs-table.component.css']
+  styleUrls: ['./jobs-table.component.css', '../../../theme.less']
 })
 export class JobsTableComponent implements OnInit {
+  value1 = 1;
+  value2 = 0;
+  isVisibleMiddle = false;
   dataSet = [
     {
-      name       : 'John Brown',
-      age        : 32,
-      expand     : false,
-      address    : 'New York No. 1 Lake Park',
+      position: 'Camera',
+      expand: false,
+      date: '10/20/18',
       description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.'
     },
     {
-      name       : 'Jim Green',
-      age        : 42,
-      expand     : false,
-      address    : 'London No. 1 Lake Park',
+      position: 'Audience',
+      expand: false,
+      date: '10/20/18',
       description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.'
     },
     {
-      name       : 'Joe Black',
-      age        : 32,
-      expand     : false,
-      address    : 'Sidney No. 1 Lake Park',
+      position: 'Boom',
+      expand: false,
+      date: '10/20/18',
+      description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.'
+    },
+    {
+      position: 'Camera',
+      expand: false,
+      date: '10/20/18',
+      description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.'
+    },
+    {
+      position: 'Audience',
+      expand: false,
+      date: '10/20/18',
+      description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.'
+    },
+    {
+      position: 'Boom',
+      expand: false,
+      date: '10/20/18',
+      description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.'
+    },
+    {
+      position: 'Camera',
+      expand: false,
+      date: '10/20/18',
+      description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.'
+    },
+    {
+      position: 'Audience',
+      expand: false,
+      date: '10/20/18',
+      description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.'
+    },
+    {
+      position: 'Boom',
+      expand: false,
+      date: '10/20/18',
       description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.'
     }
   ];
-  constructor() { }
 
   ngOnInit() {
+
   }
 
+  appliedForJob(job) {
+
+  }
+
+  showModalMiddle(): void {
+    this.isVisibleMiddle = true;
+  }
+
+  handleOkMiddle(): void {
+    console.log('click ok');
+    this.isVisibleMiddle = false;
+  }
+
+  handleCancelMiddle(): void {
+    this.isVisibleMiddle = false;
+  }
 }
