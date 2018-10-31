@@ -1,0 +1,9 @@
+::ng-deep .ant-table-tbody>tr>td {
+  font-size: 12px;
+  padding: 20px 9px;
+}
+
+::ng-deep .ant-table-thead>tr>th {
+  font-size: 12px;
+  padding: 20px 10px;
+}
