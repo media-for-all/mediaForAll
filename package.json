@@ -1,18 +1,19 @@
 {
   "name": "media-for-all",
   "version": "0.0.0",
+  "angular-cli": {},
   "scripts": {
+    "_heroku": "https://www/mediaforall.herokuapp.com",
     "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build",
-    "postinstall": "ng build --aot --prod",
+    "start": "http-server dist/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "~6.2.5",
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
     "@angular/compiler": "^6.1.0",
@@ -24,7 +25,6 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
-    "express": "^4.16.2",
     "ng-zorro-antd": "^1.6.0",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
