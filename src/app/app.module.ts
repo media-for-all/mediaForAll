@@ -22,6 +22,7 @@ import {MediaForAllHeaderComponent} from './shared/media-for-all-header/media-fo
 import {LogInFormComponent} from './shared/log-in/log-in-form/log-in-form.component';
 import {ExperienceAndInterestsComponent} from './user/sign-up-manager/experience-and-interests/experience-and-interests.component';
 import {ExperienceAndInterestsFormComponent} from './user/sign-up-manager/experience-and-interests-form/experience-and-interests-form.component';
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 
 registerLocaleData(en);
 
@@ -39,7 +40,8 @@ registerLocaleData(en);
     LandingPageComponent,
     ClickToSignInOrUpComponent,
     MediaForAllHeaderComponent,
-    LogInFormComponent
+    LogInFormComponent,
+    AdminPageComponent
   ],
   imports: [
     FormsModule,

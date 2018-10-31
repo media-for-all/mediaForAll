@@ -3,15 +3,17 @@ import {NgModule} from '@angular/core';
 import {LandingPageComponent} from './shared/landing-page/landing-page.component';
 import {ClickToSignInOrUpComponent} from './shared/click-to-sign-in-or-up/click-to-sign-in-or-up.component';
 import {JobsTableComponent} from './user/jobs-table/jobs-table.component';
-import {JobFormComponent} from './admin/job-form/job-form.component';
 import {UserResponseComponent} from './admin/user-response/user-response.component';
 import {SignUpManagerComponent} from './user/sign-up-manager/sign-up-manager.component';
+import {AdminPageComponent} from './admin/admin-page/admin-page.component';
 
 const routes: Routes = [
   { path: '',
     redirectTo: 'media-for-all/job-listings',
     pathMatch: 'full' },
-
+  { path: 'home',
+    redirectTo: 'media-for-all',
+    pathMatch: 'full' },
   { path: 'media-for-all',
     component: LandingPageComponent
   },
@@ -25,7 +27,7 @@ const routes: Routes = [
     component: SignUpManagerComponent
   },
   { path: 'media-for-all/admin',
-    component: JobFormComponent
+    component: AdminPageComponent
   },
   { path: 'media-for-all/response',
     component: UserResponseComponent

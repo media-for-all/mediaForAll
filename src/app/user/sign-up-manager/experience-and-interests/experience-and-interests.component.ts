@@ -69,24 +69,24 @@ export class ExperienceAndInterestsComponent implements OnInit {
     },
     {
       department: 'Production Office',
-      title: 'Script supervisor',
+      title: 'Script Supervisor',
       decription: 'also known as “continuity person” keeps track of what parts of the script have been filmed and makes notes of any deviations between what was actually filmed and what appeared in the script}'
     },
     {
       department: 'Lighting/Electrical Department',
-      title: 'Key grip',
+      title: 'Key Grip',
       scale: '',
       description: 'the foreman of the grip department. Overseas the work and responsibilities of all of the grips on the set.'
     },
     {
       department: 'Lighting/Electrical Department',
-      title: 'Best boy grip',
+      title: 'Best Boy Grip',
       scale: '',
       description: 'assists the key grip but assumes more responsibility for the hiring and scheduling of the crew; overseas the rental of the equipment on the set.'
     },
     {
       department: 'Lighting/Electrical Department',
-      title: 'Dolly grip',
+      title: 'Dolly Grip',
       description: 'operates the camera dollies or camera cranes.'
     },
     {
@@ -97,7 +97,7 @@ export class ExperienceAndInterestsComponent implements OnInit {
     },
     {
       department: 'Lighting/Electrical Department',
-      title: 'Best boy electric',
+      title: 'Best Boy electric',
       scale: '',
       description: 'assistant to the gaffer. Generally responsible for the daily running of the lighting, hiring and scheduling of the crew; coordinating the rigging crews (depending upon the size of the production).'
 }

@@ -58,7 +58,7 @@
 
 ::ng-deep .ant-modal-body {
   padding: 10px 15px;
-  height: auto;
+  height: 70vh;
 }
 
 ::ng-deep .ant-slider-handle {

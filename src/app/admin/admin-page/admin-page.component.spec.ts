@@ -1,17 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JobFormComponent } from './job-form.component';
+import { AdminPageComponent } from './admin-page.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
 import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 
-describe('JobFormComponent', () => {
-  let component: JobFormComponent;
-  let fixture: ComponentFixture<JobFormComponent>;
+describe('AdminPageComponent', () => {
+  let component: AdminPageComponent;
+  let fixture: ComponentFixture<AdminPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JobFormComponent ],
+      declarations: [ AdminPageComponent ],
       imports: [
         FormsModule,
         ReactiveFormsModule,
@@ -19,11 +19,11 @@ describe('JobFormComponent', () => {
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents()
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JobFormComponent);
+    fixture = TestBed.createComponent(AdminPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
