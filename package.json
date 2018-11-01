@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "angular-cli": {},
   "scripts": {
-    "_heroku": "https://www/mediaforall.herokuapp.com",
     "ng": "ng",
     "start": "node server.js",
     "test": "ng test",
