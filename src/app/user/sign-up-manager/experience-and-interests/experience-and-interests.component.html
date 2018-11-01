@@ -1,8 +1,8 @@
 <div id="top-section">
   <div nz-row>
     <div nz-col nzSpan="5">
-      <button *ngIf="stage === 'interests'" class="back" nz-button nzBlock [routerLink]="['../', 'setup']"><p class="font-25 padding-top-10">&#x276E;</p></button>
-      <button *ngIf="stage === 'experience'" class="back" nz-button nzBlock [routerLink]="['../', 'interests']"><p class="font-25 padding-top-10">&#x276E;</p></button>
+      <button *ngIf="stage === 'interests'" class="back" nz-button nzBlock [routerLink]="['../', 'setup']"><p class="white font-25 padding-top-10">&#x276E;</p></button>
+      <button *ngIf="stage === 'experience'" class="back" nz-button nzBlock [routerLink]="['../', 'interests']"><p class="white font-25 padding-top-10">&#x276E;</p></button>
 
     </div>
     <div nz-col nzSpan="19">
@@ -13,16 +13,28 @@
 </div>
 <div id="middle-section">
   <ng-container *ngFor="let category of categoriesOfJobs">
-    <nz-modal [nzStyle]="{ top: '20px' }" [(nzVisible)]="isVisibleTop" nzTitle="Interest from 1-5" (nzOnCancel)="handleCancelTop()" (nzOnOk)="handleOkTop()">
+    <nz-modal *ngIf="stage === 'interests'" [nzStyle]="{ top: '20px' }" [(nzVisible)]="isVisibleTop" nzTitle="Interest from 1-5" (nzOnCancel)="handleCancelTop()" (nzOnOk)="handleOkTop()">
       <ng-container *ngFor="let job of jobsInCategories">
         <p style="color: #11B5BC; text-align: center">{{job.title}}<nz-tooltip nzTitle={{job.description}}></nz-tooltip></p>
           <nz-slider [nzMin]="1" [nzMax]="5" name="slider" ngDefaultControl [(ngModel)]="job.scale"></nz-slider>
             <div nz-col nzSpan="10">
-              <p class="slider-definition">No Experience</p>
+              <p class="slider-definition">No Interest</p>
             </div>
             <div nz-col nzSpan="14">
-              <p class="slider-definition right-text"> Pro Experience</p>
+              <p class="slider-definition right-text"> Very Interested</p>
            </div>
+      </ng-container>
+    </nz-modal>
+    <nz-modal *ngIf="stage === 'experience'" [nzStyle]="{ top: '20px' }" [(nzVisible)]="isVisibleTop" nzTitle="Experience from 1-5" (nzOnCancel)="handleCancelTop()" (nzOnOk)="handleOkTop()">
+      <ng-container *ngFor="let job of jobsInCategories">
+        <p style="color: #11B5BC; text-align: center">{{job.title}}<nz-tooltip nzTitle={{job.description}}></nz-tooltip></p>
+        <nz-slider [nzMin]="1" [nzMax]="5" name="slider" ngDefaultControl [(ngModel)]="job.scale"></nz-slider>
+        <div nz-col nzSpan="10">
+          <p class="slider-definition">No Experience</p>
+        </div>
+        <div nz-col nzSpan="14">
+          <p class="slider-definition right-text"> Pro Experience</p>
+        </div>
       </ng-container>
     </nz-modal>
     <div style="background: #11B5BC;padding:30px;">
@@ -61,7 +73,7 @@
     <!--</div>-->
   <!--</div>-->
   <button *ngIf="stage === 'interests'" nz-button class="next-button-white" [routerLink]="['../', 'experience']">Next</button>
-  <button *ngIf="stage === 'experience'" nz-button class="next-button-white" [routerLink]="['']">Next</button>
+  <button *ngIf="stage === 'experience'" nz-button class="next-button-white" [routerLink]="['']">Go To Jobs</button>
 
 </div>
 

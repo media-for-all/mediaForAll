@@ -1,19 +1,23 @@
 {
   "name": "media-for-all",
   "version": "0.0.0",
+  "angular-cli": {},
   "scripts": {
+    "_heroku": "https://www/mediaforall.herokuapp.com",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng test --watch false && npm run e2e && ng build --prod --no-progress",
+    "start": "node server.js",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "preinstall":   "npm install -g http-server",
+    "postinstall":  "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
     "@angular/compiler": "^6.1.0",
+    "@angular/compiler-cli": "^6.1.0",
     "@angular/core": "^6.1.0",
     "@angular/forms": "^6.1.0",
     "@angular/http": "^6.1.0",
@@ -28,7 +32,6 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
     "@angular/cli": "~6.2.5",
-    "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",

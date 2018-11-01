@@ -7,16 +7,16 @@
   background-color: #0f0d0f;
   padding-top: 5px;
   text-align: center;
-  height: 7vh;
+  height: 10vh;
 }
 
 #bottom-section {
   background-color: #89898b;
-  height: 30vh;
+  height: 27vh;
 }
 
 .sign-up {
-  margin-top: 30px !important;
+  margin-top: 22px !important;
   width: 270px;
   text-transform: uppercase;
   height: 40px !important;
@@ -65,6 +65,10 @@ img {
 
 ::ng-deep .ant-tabs-nav .ant-tabs-tab-active {
   color: white;
+}
+
+::ng-deep .ant-tabs-nav-scroll {
+  padding-top: 15px;
 }
 
 ::ng-deep .ant-tabs-top .ant-tabs-ink-bar-animated {

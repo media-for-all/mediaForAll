@@ -11,7 +11,7 @@
 
 #bottom-section {
   background-color: #afafb1;
-  height: 11vh;
+  height: 12vh;
   display: block;
 }
 
@@ -22,11 +22,15 @@
 }
 
 .back {
-  background-color: #11B5BC;
-  border: none;
+  background-color: #11B5BC !important;
+  border: none !important;
   border-radius: 0px;
   color: white;
   font-size: 18px;
+}
+
+.back:hover {
+  background-color: #0b777c !important;
 }
 
 ::ng-deep .ant-btn:hover {
@@ -44,6 +48,11 @@
 ::ng-deep .ant-btn.active {
   color: #11B5BC;
   background: #11B5BC;
+  border-color: #11B5BC;
+}
+
+::ng-deep .ant-btn-block {
+  background-color:  #11B5BC;
   border-color: #11B5BC;
 }
 
