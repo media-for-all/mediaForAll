@@ -1,12 +1,12 @@
 #top-section {
   background-color: #0f0d0f;
-  height: 10.75vh;
+  height: 65px;
   text-align: center
 }
 
 #middle-section {
   background-color: #808082;
-  height: 91vh;
+  height: 605px;
 }
 
 ::ng-deep .ant-tabs-nav-wrap {

@@ -1,18 +1,18 @@
 #top-section {
   background-color: #0f0d0f;
-  height: 63vh;
+  height: 420px;
 }
 
 #middle-section {
   background-color: #0f0d0f;
   padding-top: 5px;
   text-align: center;
-  height: 10vh;
+  height: 70px;
 }
 
 #bottom-section {
   background-color: #89898b;
-  height: 27vh;
+  height: 175px;
 }
 
 .sign-up {
@@ -41,7 +41,7 @@
 #img-holder {
   display: flex;
   justify-content: center;
-  padding-top: 18%;
+  padding-top: 100px;
 }
 
 img {
