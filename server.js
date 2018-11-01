@@ -7,5 +7,6 @@ app.get('/*', function(req,res) {
   res.sendFile(path.join(__dirname + '/dist/mediaForAll/index.html'));
 
 });
+console.log("PORT = " + process.env.PORT);
 
 app.listen(process.env.PORT || 4200);
