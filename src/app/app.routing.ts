@@ -9,7 +9,7 @@ import {AdminPageComponent} from './admin/admin-page/admin-page.component';
 
 const routes: Routes = [
   { path: '',
-    redirectTo: 'media-for-all/job-listings',
+    redirectTo: 'media-for-all',
     pathMatch: 'full' },
   { path: 'home',
     redirectTo: 'media-for-all',
