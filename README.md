@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+To run wiithout the express server (needed for Heroku), swap the sripts section of the package.json file from :
+
+  "scripts": {
+    "ng": "ng",
+    "start": "node server.js",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod"
+  },
+
+to:
+
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng test --watch false && npm run e2e && ng build --prod --no-progress",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
