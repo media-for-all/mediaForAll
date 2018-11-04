@@ -1,0 +1,18 @@
+::ng-deep .ant-table-tbody>tr>td {
+  font-size: 12px;
+  padding: 20px 9px;
+}
+
+::ng-deep .ant-table-thead>tr>th {
+  font-size: 12px;
+  padding: 20px 10px;
+}
+
+::ng-deep .ant-pagination.ant-table-pagination {
+  margin: 16px 15px;
+}
+
+::ng-deep .ant-table-expanded-row {
+  padding-left: 20px;
+  padding-right: 20px;
+}

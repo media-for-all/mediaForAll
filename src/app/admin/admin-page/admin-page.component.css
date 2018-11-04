@@ -1,0 +1,41 @@
+#top-section {
+  background-color: #0f0d0f;
+  height: 80px;
+  text-align: center
+}
+
+#middle-section {
+  background-color: #808082;
+  height: 605px;
+}
+
+::ng-deep .ant-tabs-nav-wrap {
+  padding-top: 18px
+}
+::ng-deep .ant-tabs-nav .ant-tabs-tab {
+  color: #808082;
+}
+
+::ng-deep .ant-tabs-nav .ant-tabs-tab:hover {
+  color: white;
+}
+
+::ng-deep .ant-tabs-nav .ant-tabs-tab-active {
+  color: white;
+}
+
+::ng-deep .ant-tabs-top .ant-tabs-ink-bar-animated {
+  color: #11B5BC;
+}
+
+::ng-deep .ant-tabs-ink-bar {
+  background-color: #11B5BC;
+}
+
+::ng-deep .ant-tabs-tab-prev-icon {
+  display: none;
+}
+
+::ng-deep .ant-tabs-tab-next-icon {
+  display: none;
+}

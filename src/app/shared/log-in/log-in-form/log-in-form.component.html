@@ -1,5 +1,5 @@
 <form nz-form [formGroup]="validateLogin" class="login-form" (ngSubmit)="submitForm()">
-  <nz-form-item>
+  <nz-form-item class="margin-bottom-10">
     <nz-form-control>
       <nz-input-group>
         <input [ngClass]="{'wide-input': wideInput, 'high-input': !wideInput}" type="text" nz-input formControlName="userName" placeholder="Username">
@@ -7,7 +7,7 @@
       <nz-form-explain class="padding-left-30" *ngIf="validateLogin.get('userName').dirty && validateLogin.get('userName').errors">Please input your username!</nz-form-explain>
     </nz-form-control>
   </nz-form-item>
-  <nz-form-item>
+  <nz-form-item class="margin-bottom-10">
     <nz-form-control>
       <nz-input-group>
         <input [ngClass]="{'wide-input': wideInput, 'high-input': !wideInput}" type="password" nz-input formControlName="password" placeholder="Password">
@@ -16,7 +16,7 @@
     </nz-form-control>
   </nz-form-item>
   <nz-form-item>
-    <nz-form-control class="padding-left-30">
+    <nz-form-control>
         <button nz-button class="login-form-button" (click)="logInUser()" [nzType]="'primary'">Log in</button>
         <a class="padding-left-40 margin-bottom-20" (click)="forgotPassword()">Forgot password</a>
     </nz-form-control>

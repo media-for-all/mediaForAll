@@ -1,4 +1,4 @@
-import { browser, by, element } from 'protractor';
+import {browser, by, element, protractor, $} from 'protractor';
 
 export class AppPage {
   navigateTo() {
@@ -6,6 +6,8 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.css('h6')).getText();
+    browser.waitForAngularEnabled();
+    browser.wait(protractor.ExpectedConditions.visibilityOf($('#get-started')), 20000);
+    return element(by.css('h5')).getText();
   }
 }

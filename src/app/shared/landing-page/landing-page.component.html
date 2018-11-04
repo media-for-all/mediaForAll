@@ -1,8 +1,17 @@
 <div id="top-section">
-  <div id="img-holder">
-    <img src="assets/aquaM4A.jpg" alt="Media For All logo">
+  <div nz-row>
+    <div nz-col [nzSpan]="5" [nzOffset]="19">
+      <button id="hidden-admin-button" nz-button nzBlock [routerLink]="['./', 'admin']"></button>
+    </div>
   </div>
-  <p class="thin-font">Media For All</p>
+  <div nz-row>
+    <div nz-col [nzSpan]="24">
+      <div id="img-holder">
+        <img src="assets/aquaM4A.jpg" alt="Media For All logo">
+      </div>
+      <h5 class="thin-font">Media For All</h5>
+    </div>
+  </div>
 </div>
 <div id="middle-section">
   <p class="font-25 white padding-left-40 padding-top-60 padding-right-70 margin-bottom-0"><b>Find Production Crew Jobs</b></p>

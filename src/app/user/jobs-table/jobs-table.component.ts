@@ -14,55 +14,49 @@ export class JobsTableComponent implements OnInit {
       position: 'Camera',
       expand: false,
       date: '10/20/18',
-      description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.'
+      description: 'Work with camera, rehearsal day before.'
     },
     {
       position: 'Audience',
       expand: false,
       date: '10/20/18',
-      description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.'
+      description: 'Keep that audience excited!.'
     },
     {
       position: 'Boom',
       expand: false,
       date: '10/20/18',
-      description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.'
+      description: 'Do not drop the boom into the shot.'
     },
     {
-      position: 'Camera',
+      position: 'Assistant Camera',
       expand: false,
       date: '10/20/18',
-      description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.'
+      description: 'Assist with camera, rehearsal day before.'
     },
     {
-      position: 'Audience',
+      position: 'Craft Services',
       expand: false,
       date: '10/20/18',
-      description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.'
+      description: 'Supply snacks.'
     },
     {
-      position: 'Boom',
+      position: 'Production Assistant',
       expand: false,
       date: '10/20/18',
-      description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.'
+      description: 'Help where needed.'
     },
     {
-      position: 'Camera',
+      position: 'Hair Stylist',
       expand: false,
       date: '10/20/18',
-      description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.'
+      description: 'Basic contemporary styles- male.'
     },
     {
-      position: 'Audience',
+      position: '2nd Assistant Director',
       expand: false,
       date: '10/20/18',
-      description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.'
-    },
-    {
-      position: 'Boom',
-      expand: false,
-      date: '10/20/18',
-      description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.'
+      description: 'Help 1st AD.'
     }
   ];
 

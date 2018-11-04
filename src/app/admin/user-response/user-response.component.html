@@ -1,5 +1,26 @@
-<p>
-  user-response works!
-</p>
+<div id="middle-section">
+  <nz-table #nzTable [nzData]="dataSet">
+    <thead>
+    <tr>
+      <th nzShowExpand></th>
+      <th>Position</th>
+      <th>Production Name</th>
+      <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-template ngFor let-data [ngForOf]="nzTable.data">
+      <tr>
+        <td nzShowExpand [(nzExpand)]="data.expand"></td>
+        <td>{{data.position}}</td>
+        <td>{{data.productionName}}</td>
+        <td>{{data.productionDate}}</td>
+      </tr>
+      <tr [nzExpand]="data.expand">
+        <td colspan="24">{{data.name}} - {{data.email}}<br>{{data.interests}}<br>{{data.experience}}</td>
+      </tr>
+    </ng-template>
+    </tbody>
+  </nz-table>
 
-
+</div>

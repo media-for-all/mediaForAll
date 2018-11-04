@@ -1,5 +1,6 @@
 export class Interests {
-  id: number;
-  category: string;
-  level: number;
+  interestKey: number;
+  categoryKey: number;
+  categoryName: string;
+  interestLevel: number;
 }

@@ -7,8 +7,8 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('text should include "jobs"', () => {
+  it('text should equal "MEDIA FOR ALL"', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toContain('Jobs');
+    expect(page.getParagraphText()).toContain('MEDIA FOR ALL');
   });
 });

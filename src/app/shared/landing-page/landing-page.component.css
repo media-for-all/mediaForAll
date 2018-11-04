@@ -3,14 +3,14 @@
 /*}*/
 
 #img-holder {
- display: flex;
+  display: flex;
   justify-content: center;
-  padding-top: 40%;
+  padding-top: 5vh;
 }
 
 img {
-  width: 42vw;
-  height: 42vw;
+  width: 150px;
+  height: 150px;
 }
 
 #top-section {
@@ -34,6 +34,12 @@ img {
   border-radius: 0px;
 }
 
+#hidden-admin-button {
+  background-color: #11B5BC;
+  border: none;
+  border-radius: 0px;
+}
+
 ::ng-deep .ant-btn {
   border: none;
   border-radius: 0px;
@@ -42,6 +48,23 @@ img {
 ::ng-deep .ant-btn-block {
   height: 9vh !important;
 }
+
+/*@media screen and (min-width: 768px) {*/
+  /*#img-holder {*/
+    /*padding-top: 60px;*/
+  /*}*/
+  /*#top-section {*/
+    /*height: 355px;*/
+  /*}*/
+  /*#middle-section {*/
+    /*height: 250px;*/
+  /*}*/
+  /*img {*/
+    /*width: 175px;*/
+    /*height: 175px;*/
+  /*}*/
+/*}*/
+
 
 /*.icons-list > .anticon {*/
   /*margin-right: 10px;*/

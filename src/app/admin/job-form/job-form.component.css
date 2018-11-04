@@ -1,0 +1,8 @@
+.job-form-button {
+  background-color: #808082;
+
+}
+
+::ng-deep .ant-tabs-nav-container-scrolling {
+  padding: 20px 0px 0px 0px;
+}
