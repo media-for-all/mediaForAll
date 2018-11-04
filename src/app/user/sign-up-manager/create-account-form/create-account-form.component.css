@@ -11,6 +11,8 @@
 #bottom-section {
   background-color: #afafb1;
   height: 11vh;
+  display: flex;
+  justify-content: center;
 }
 
 #img-holder {

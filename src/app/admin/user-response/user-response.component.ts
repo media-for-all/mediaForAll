@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RegisteredUser} from '../../shared/models/registeredUser.model';
+import {AppServices} from '../../app.services';
+import {stringify} from 'querystring';
 
 @Component({
   selector: 'app-user-response',
@@ -11,6 +13,7 @@ export class UserResponseComponent implements OnInit {
   value1 = 1;
   value2 = 0;
   isVisibleMiddle = false;
+  // dataSet = [];
   // Will need to add expand field to the data coming from backend
   dataSet = [
     {
@@ -99,8 +102,21 @@ export class UserResponseComponent implements OnInit {
     // }
   ];
 
-  ngOnInit() {
+  constructor(
+    private appServices: AppServices
+  ) { }
 
+  ngOnInit() {
+    // this.getApplicants();
+  }
+
+  getApplicants() {
+    this.appServices.getAllApplicants()
+      .subscribe(
+        response => {
+          this.dataSet = response;
+          console.log("dataset = " + JSON.stringify(this.dataSet))
+        });
   }
 
   appliedForJob(job) {

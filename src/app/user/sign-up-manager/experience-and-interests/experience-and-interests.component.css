@@ -12,7 +12,8 @@
 #bottom-section {
   background-color: #afafb1;
   height: 12vh;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 .slider-definition {

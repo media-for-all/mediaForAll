@@ -1,18 +1,19 @@
 #top-section {
   background-color: #0f0d0f;
-  height: 420px;
+  height: 63vh;
 }
 
 #middle-section {
   background-color: #0f0d0f;
   padding-top: 5px;
   text-align: center;
-  height: 70px;
+  height: 10vh;
+  border-top: 1px solid #0f0d0f;
 }
 
 #bottom-section {
   background-color: #89898b;
-  height: 175px;
+  height: 27vh;
 }
 
 .sign-up {
@@ -66,7 +67,7 @@ img {
 }
 
 ::ng-deep .ant-tabs-nav-scroll {
-  padding-top: 5px;
+  padding-top: 20px;
 }
 
 ::ng-deep .ant-tabs-top .ant-tabs-ink-bar-animated {

@@ -10,8 +10,12 @@
 <div id="middle-section">
   <nz-tabset>
     <nz-tab nzTitle="Sign Up">
-      <button nz-button class="primary sign-up" [routerLink]="['../sign-up', 'setup']">Sign Up With Email</button>
-      <button nz-button class="primary skip" [routerLink]="['../', 'job-listings']">Skip & Search Jobs</button>
+      <div nz-col="24">
+        <button nz-button class="primary sign-up" [routerLink]="['../sign-up', 'setup']">Sign Up With Email</button>
+      </div>
+      <div nz-col="24">
+        <button nz-button class="primary skip" [routerLink]="['../', 'job-listings']">Skip & Search Jobs</button>
+      </div>
     </nz-tab>
     <nz-tab nzTitle="Log In">
       <div class="padding-top-5">
