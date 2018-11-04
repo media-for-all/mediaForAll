@@ -76,38 +76,14 @@ export class UserResponseComponent implements OnInit {
       timeCommitment: '10 hours',
       expand: false
     },
-    // {
-    //   position: 'Boom',
-    //   expand: false,
-    //   date: '10/20/18',
-    //   description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.'
-    // },
-    // {
-    //   position: 'Camera',
-    //   expand: false,
-    //   date: '10/20/18',
-    //   description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.'
-    // },
-    // {
-    //   position: 'Audience',
-    //   expand: false,
-    //   date: '10/20/18',
-    //   description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.'
-    // },
-    // {
-    //   position: 'Boom',
-    //   expand: false,
-    //   date: '10/20/18',
-    //   description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.'
-    // }
-  ];
+    ];
 
   constructor(
     private appServices: AppServices
   ) { }
 
   ngOnInit() {
-    // this.getApplicants();
+    this.getApplicants();
   }
 
   getApplicants() {

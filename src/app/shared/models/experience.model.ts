@@ -1,5 +1,6 @@
 export class Experience {
-  id: number;
-  category: string;
-  level: number;
+  experienceKey: number;
+  categoryKey: number;
+  categoryName: string;
+  experienceLevel: number;
 }

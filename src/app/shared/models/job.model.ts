@@ -1,7 +1,8 @@
 export class Job {
   id: number;
-  position: string;
+  categoryName: string;
   productionName: string;
+  jobDescription: string;
   productionDate: Date;
   callTime: string;
   timeCommitment: string;

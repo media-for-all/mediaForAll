@@ -5,15 +5,14 @@
 
 #middle-section {
   background-color: #0f0d0f;
-  padding-top: 5px;
   text-align: center;
-  height: 10vh;
+  height: 12.5vh;
   border-top: 1px solid #0f0d0f;
 }
 
 #bottom-section {
   background-color: #89898b;
-  height: 27vh;
+  height: 24.5vh;
 }
 
 .sign-up {

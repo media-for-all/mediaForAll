@@ -11,3 +11,8 @@
 ::ng-deep .ant-pagination.ant-table-pagination {
   margin: 16px 15px;
 }
+
+::ng-deep .ant-table-expanded-row {
+  padding-left: 20px;
+  padding-right: 20px;
+}

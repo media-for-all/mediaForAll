@@ -6,6 +6,8 @@
 #middle-section {
   background-color: #11B5BC;
   height: 75vh;
+  display: flex;
+  justify-content: center;
 }
 
 #bottom-section {
